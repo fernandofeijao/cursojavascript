@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            
+        </title>
+    </head>
+    <body>
+        <script>
+            function retornaSexo(sexo){
+                if(sexo === 'M') {
+                    return 'Masculino';
+                } else if(sexo === 'F') {
+                    return 'Feminino';
+                } else {
+                    return 'Outro';
+                }
+            }
+
+            function retornaNumeroCom3Igual(numero1){
+                if(numero1 === 1) {
+                    return numero1;
+                } 
+            }
+
+            function retornaNumeroCom2Igual(numero1) {
+                if (numero1 == 1) {
+                    return numero1;
+                }
+            }
+
+            function isNumberWithIsNaN(param){
+                // Com função isNaN, "1" e 1 é um tipo numérico                
+                if(!isNaN(param)) {
+                    return "É tipo numérico.";
+                } else {
+                    return "Não é tipo numérico."
+                }
+            }
+
+            function isNumberWithTypeOf(param) {
+                // Com typeof, "1" não é tipo numérico, enquanto 1 é tipo numérico
+                if(typeof param == 'number'){
+                    return "É tipo numérico.";
+                } else {
+                    return "Não é tipo numérico.";
+                }
+            }
+
+            var validacao = 1;
+
+            console.log(retornaSexo('F'));
+            console.log(retornaNumeroCom2Igual(validacao));
+            console.log(retornaNumeroCom3Igual(validacao));
+            console.log(isNumberWithIsNaN(validacao));
+            console.log(isNumberWithTypeOf(validacao));
+        </script>
+    </body>    
+</html>
