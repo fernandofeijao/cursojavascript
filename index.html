@@ -1,10 +1,15 @@
 <html>
     <head>
-        <title>
-            
-        </title>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
     </head>
     <body>
+        <h1>Curso de Javascript com Rocketseat</h1>
+        <ul>
+            <li><a href="manipulandodom.html">Manipulando a DOM</a></li>
+            <li><a href="apptodo/index.html">App ToDos</a></li>
+            <li><a href="jsassincrono/index.html">JS Assincrono</a></li>
+        </ul>
         <script>
             function retornaSexo(sexo){
                 if(sexo === 'M') {
@@ -47,6 +52,10 @@
             }
 
             var validacao = 1;
+
+            function mostrarAlerta(){
+                alert('Botão foi clicado');
+            }
 
             console.log(retornaSexo('F'));
             console.log(retornaNumeroCom2Igual(validacao));

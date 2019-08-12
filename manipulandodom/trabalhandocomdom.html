@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trabalhando com DOM</title>
+    </head>
+    <body>
+        <h1>Trabalhando com a DOM</h1>
+        <div id="app">
+            <input type="text" name="nome" id="nome" />
+            <input type="text" name="nome2" id="nome2" />
+            <button class="botao">Adicionar</button>
+        </div>
+    </body>
+    <script>
+        //Tradicional
+        var inputElement = document.getElementById('nome');
+        var htmlCollection = document.getElementsByTagName('input');
+        var buttonElements = document.getElementsByClassName('botao');
+
+        //Queryselector
+        var inputElementQS = document.querySelector('div#app input');
+        var inputElementQS2 = document.querySelector('input[name=nome]');
+
+        //QuerySelectorAll
+        var inputAll = document.querySelectorAll('div#app input');
+
+        //Adicionando propriedades
+        var buttonElement = document.querySelector('button.botao');
+
+        buttonElement.onclick = function(){
+            var text = inputElementQS2.value;
+            alert(text);
+        };
+
+        console.log(inputElement);
+        console.log(htmlCollection);
+        console.log(htmlCollection[0]);
+        console.log(htmlCollection[1]);
+        console.log(buttonElements);
+        console.log(buttonElements[0]);
+        console.log(inputElementQS);
+        console.log(inputElementQS2);
+        console.log(inputAll);
+        console.log(inputAll[0]);
+    </script>
+</html>
