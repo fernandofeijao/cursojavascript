@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercicio 4</title>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+
+            </ul>
+            <input type="text" name="nome">
+            <button onclick="adicionar()">Adicionar</button>
+        </div>
+        <script>
+            var nomes = [
+                "Diego",
+                "Gabriel",
+                "Lucas"
+            ];
+
+            function buildList(){
+                //var listElement = document.querySelector('#app ul');
+                
+                for(nome of nomes){
+                    criarNovoItem(nome);
+                }
+            }
+
+            buildList();
+
+            function criarNovoItem(valorItem){
+                var nomeElement = document.createTextNode(valorItem);
+                var listElement = document.querySelector('#app ul');
+                var itemElement = document.createElement('li');
+                itemElement.appendChild(nomeElement);
+                listElement.appendChild(itemElement);
+            }
+
+            function adicionar(){
+                var inputElement = document.querySelector('input[name=nome]');
+                criarNovoItem(inputElement.value);
+                inputElement.value = '';
+            }
+        </script>
+    </body>
+</html>

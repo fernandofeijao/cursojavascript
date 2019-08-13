@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercicio 3</title>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+
+            </ul>
+        </div>
+        <script>
+            var nomes = [
+                "Diego",
+                "Gabriel",
+                "Lucas"
+            ];
+
+            function buildList(){
+                var listElement = document.querySelector('#app ul');
+                
+                for(nome of nomes){
+                    var itemElement = document.createElement('li');
+                    var nomeElement = document.createTextNode(nome);
+                    itemElement.appendChild(nomeElement);
+                    listElement.appendChild(itemElement);
+                }
+            }
+
+            buildList();
+        </script>
+    </body>
+</html>

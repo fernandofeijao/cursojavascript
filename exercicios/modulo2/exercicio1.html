@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercicio 1</title>
+    </head>
+    <body>
+        <div id="app">
+            <button onclick="adicionarQuadrado();">Adicionar quadrado vermelho</button>
+            <div id="quadrados">
+            </div>
+        </div>
+        <script>
+            function adicionarQuadrado(){
+                var divElement = document.querySelector('#quadrados');
+                var quadradoElement = document.createElement('div');
+                quadradoElement.style.height = 100;
+                quadradoElement.style.width = 100;
+                quadradoElement.style.backgroundColor = 'Red';
+
+                divElement.appendChild(quadradoElement);
+            }
+        </script>
+    </body>
+</html>
